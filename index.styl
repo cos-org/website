@@ -226,7 +226,17 @@ img
 @media screen and (max-width:768px)
     .container
         .header
-            display: none
+            position: static
+            width: 100%
+            height: 100px
+            line-height: 100px
+            background-color: #4C4592
+            padding: 0
+            .h-left
+                float: unset
+                text-align: center
+            .h-right
+                display: none   
         .main
             text-align: center
             #intro
