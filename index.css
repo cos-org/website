@@ -26,10 +26,11 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 270px);
+  width: calc(100% - 287px);
   height: 80px;
   line-height: 80px;
   padding: 0 135px;
+  background-color: rgba(76,69,146,0.7);
 }
 .container .header .h-left {
   float: left;
