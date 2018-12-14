@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.6;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.container .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 270px);
+  height: 80px;
+  line-height: 80px;
+  padding: 0 135px;
+}
+.container .header .h-left {
+  float: left;
+  color: #fff;
+  font-size: 18px;
+}
+.container .header .h-right {
+  float: right;
+}
+.container .header .h-right li {
+  float: left;
+  margin-left: 60px;
+  font-size: 15px;
+}
+.container .header .h-right li:first-child {
+  margin-left: 0;
+}
+.container .header .h-right li a.active {
+  opacity: 1;
+}
+.container .main #intro {
+  background-color: #4c4592;
+  height: 537px;
+  overflow: hidden;
+  padding: 175 135px 0;
+}
+.container .main #intro .intro-left {
+  width: 340px;
+  height: 434px;
+  float: left;
+}
+.container .main #intro .intro-right {
+  float: left;
+  margin-left: 100px;
+  width: calc(100% - 440px);
+}
