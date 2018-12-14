@@ -148,3 +148,8 @@ a {
   margin: 25px 0;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .container .header {
+    display: none;
+  }
+}
