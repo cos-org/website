@@ -214,6 +214,8 @@ img {
 }
 .container .main #team .team-list .list-item .item-left img {
   border-radius: 50%;
+  height: 118px;
+  width: 118px;
 }
 .container .main #team .team-list .list-item .item-right {
   float: left;
