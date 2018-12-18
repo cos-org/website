@@ -15,7 +15,7 @@
         <div class="header">
             <div class="h-left">
                 <img src='img/logo.png' />COS CHAIN</div>
-            <div class="h-right">
+            <div class="h-right" id="tab">
                 <li>
                     <a href="#intro" class="active">项目简介</a>
                 </li>
@@ -44,7 +44,7 @@
                     <div class="sub-title">COS(Community Operating System)</div>
                     <p class="intro-text">COS是在技术上充分利用区块链的去中心化、开放性、自治性、去信任、信息不可篡改等优势，将社群管理与发展方面的最佳实践通过社区不断总结，并通过技术固化为程序与智能合约进行公正公开的执行。旨在为社群管理提高更新更好的体验。</p>
                     <p class="intro-text">社群运营过程中遇到的主要场景，将由联盟提供直接的技术解决方案，同时COS将为第三方开发者提供开发接口，方便第三方开发者进行开发应用，并通过不断增加的应用满足社群管理与发展中的各类需求。</p>
-                    <div class="download">下载白皮书</div>
+                    <div class="download"><a href="whitepaper1.0.pdf">下载白皮书</a></div>
                 </div>
             </div>
             <div id="func-module">
@@ -56,7 +56,7 @@
                             <img src="img/basic-app.png" alt="">
                         </div>
                         <div class="item-title">社群基本应用</div>
-                        <div class="item-examples">成员管理、活动管理、投票、论</div>
+                        <div class="item-examples">成员管理、活动管理、投票、论坛</div>
                     </div>
                     <div class="list-item">
                         <div class="item-img">
@@ -77,7 +77,7 @@
                             <img src="img/affair.png" alt="">
                         </div>
                         <div class="item-title">联盟事务</div>
-                        <div class="item-examples">联盟决策系统、秘书处管理、运营统计系</div>
+                        <div class="item-examples">联盟决策系统、秘书处管理、运营统计系统</div>
                     </div>
                 </div>
             </div>
@@ -173,14 +173,14 @@
                             <div class="title">杨勇
                                 <span>首席架构师/联合创始人</span>
                             </div>
-                            <p>北京大学数学系97级。中国式众筹布道者和领军人物，人才IPO布道者。一八九八咖啡馆董事长、中关村互助众筹研究院执行院长、金融客咖啡首席架构师、北大校友创业联合会荣誉会长、中关村百人会天使投资联盟副理事长、畅销书《中国式众筹》作者。</p>
+                            <p>北京大学数学系97级。中国式众筹布道者和领军人物，人才IPO布道者。一八九八咖啡馆董事长、中关村互助众筹研究院执行院长、北大校友创业联合会荣誉会长、中关村百人会天使投资联盟副理事长、畅销书《中国式众筹》作者。</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="about">
                 <div class="module-title">关于联盟</div>
-                <div class="sub-title">联盟是项目完成发起成立全过程后本项目的最高权力机构，联盟负责关于COS生态建设的一切事物</div>
+                <div class="sub-title">联盟是项目完成发起成立全过程后本项目的最高权力机构，联盟负责关于COS生态建设的一切事务</div>
                 <img src="img/group.png" alt="" id="groupImg">
             </div>
         </div>
@@ -199,6 +199,18 @@
             groupImg.setAttribute('src', 'img/group.png');
         } else {
             groupImg.setAttribute('src', 'img/group-mobile.png');
+        }
+        const tabs = document.getElementById("tab");
+        const lis = tabs.getElementsByTagName("li");
+        for(let idx = 0; idx < lis.length; idx++){
+            lis[idx].onclick = function() {
+                for(let idx1 = 0; idx1 < lis.length; idx1 ++){  
+                    const a = lis[idx1].getElementsByTagName("a")[0];
+                    a.className = '';
+                }
+                const a = lis[idx].getElementsByTagName("a")[0];
+                a.className = 'active';
+            }
         }
         window.onresize = function () {
             const _width = document.body.clientWidth;

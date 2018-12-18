@@ -84,6 +84,9 @@ img {
   color: #fff;
   cursor: pointer;
 }
+.container .main #intro .intro-right .download a {
+  opacity: 1;
+}
 .container .main #intro .module-title {
   color: #fff;
   text-align: left;
@@ -211,6 +214,8 @@ img {
 }
 .container .main #team .team-list .list-item .item-left img {
   border-radius: 50%;
+  height: 118px;
+  width: 118px;
 }
 .container .main #team .team-list .list-item .item-right {
   float: left;
@@ -479,6 +484,8 @@ img {
   .container .main #team .team-list .list-item .item-right p {
     color: #838383;
     line-height: 22px;
+    -webkit-line-clamp: 6;
+    text-align: justify;
   }
   .container .main #about {
     background-color: #4c4592;
