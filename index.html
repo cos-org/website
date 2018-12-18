@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" 
-      type="image/png" 
-      href="img/favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="index.css">
     <title>COS：新一代社群系统</title>
 </head>
@@ -183,7 +181,7 @@
             <div id="about">
                 <div class="module-title">关于联盟</div>
                 <div class="sub-title">联盟是项目完成发起成立全过程后本项目的最高权力机构，联盟负责关于COS生态建设的一切事物</div>
-                <img src="img/group.png" alt="">
+                <img src="img/group.png" alt="" id="groupImg">
             </div>
         </div>
         <div class="footer">
@@ -193,4 +191,25 @@
         </div>
     </div>
 </body>
+<script>
+    window.onload = function () {
+        const _width = document.body.clientWidth;
+        const groupImg = document.getElementById("groupImg");
+        if (_width > 768) {
+            groupImg.setAttribute('src', 'img/group.png');
+        } else {
+            groupImg.setAttribute('src', 'img/group-mobile.png');
+        }
+        window.onresize = function () {
+            const _width = document.body.clientWidth;
+            const groupImg = document.getElementById("groupImg");
+            if (_width > 768) {
+                groupImg.setAttribute('src', 'img/group.png');
+            } else {
+                groupImg.setAttribute('src', 'img/group-mobile.png');
+            }
+        }
+    }
+</script>
+
 </html>

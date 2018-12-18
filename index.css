@@ -249,6 +249,9 @@ img {
   color: rgba(255,255,255,0.5);
   margin-bottom: 100px;
 }
+.container .main #about img {
+  max-width: 100%;
+}
 .container .main .module-title {
   font-size: 39px;
   color: #424345;
